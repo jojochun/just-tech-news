@@ -13,8 +13,6 @@ router.get('/', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-
-
 });
 
 // GET /api/users/1
@@ -51,8 +49,6 @@ router.post('/', (req, res) => { // expects {username: 'Lernantino', email: 'ler
             console.log(err);
             res.status(500).json(err);
         });
-
-
 });
 
 // This route will be found at http://localhost:3001/api/users/login in the browser
