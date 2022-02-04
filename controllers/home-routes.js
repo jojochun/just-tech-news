@@ -1,6 +1,23 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
+// const tempObj = {
+//     Date: "Datea",
+//     Name: "Eric",
+//     Address: {
+//         Address1: "12324 House number 0",
+//         Zip: "13455",
+//         State: "HI",
+//         City: "Aiea"
+//     }
+
+// }
+
+// const {Name}= tempObj)
+// const Name = tempObj.Name
+
+// console.log(Name);
+
 
 // get all posts for homepage
 router.get('/', (req, res) => {
@@ -37,6 +54,10 @@ router.get('/', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
+});
+
+router.get('/login', (req, res) => {
+    res.render('login');
 });
 
 module.exports = router;
